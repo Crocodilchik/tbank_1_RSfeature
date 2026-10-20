@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pit-recsys-research"
+version = "0.1.0"
+description = "Point-in-time recommendation feature research"
+requires-python = ">=3.10"
+dependencies = ["polars>=2.0,<3", "pyarrow>=19", "pydantic>=2.10,<3", "PyYAML>=6", "numpy>=1.26", "scipy>=1.13", "scikit-learn>=1.5", "psutil>=6", "catboost>=1.2", "lightgbm>=4.5", "optuna>=4", "sortedcontainers>=2.4", "filelock>=3.16"]
+
+[project.optional-dependencies]
+neural = ["torch>=2.5", "torch-geometric>=2.6"]
+test = ["pytest>=8", "pytest-cov>=6"]
+
+[tool.setuptools.packages.find]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra --strict-markers --tb=short"
+markers = ["real_data: read-only real-file sample checks", "slow: full dataset integration"]
+
+[tool.coverage.run]
+branch = true
+source = ["src"]
+
+[tool.coverage.report]
+show_missing = true
+skip_empty = true
+

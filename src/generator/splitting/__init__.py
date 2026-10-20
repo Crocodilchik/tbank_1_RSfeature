@@ -1,0 +1,1 @@
+"""Shared temporal benchmark artifacts."""

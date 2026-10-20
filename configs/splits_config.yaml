@@ -1,0 +1,22 @@
+splits:
+  timezone: UTC
+  retailrocket:
+    method: timestamp_lower_quantile
+    train_quantile: 0.8
+    valid_quantile: 0.9
+  movielens:
+    method: timestamp_lower_quantile
+    train_quantile: 0.8
+    valid_quantile: 0.9
+  taobao:
+    method: fixed_dates
+    window_start: '2017-11-24T00:00:00Z'
+    train_end: '2017-12-02T00:00:00Z'
+    valid_end: '2017-12-03T00:00:00Z'
+    window_end: '2017-12-04T00:00:00Z'
+  yoochoose:
+    method: fixed_dates
+    window_start: '2014-04-01T00:00:00Z'
+    train_end: '2014-09-01T00:00:00Z'
+    valid_end: '2014-09-15T00:00:00Z'
+    window_end: '2014-10-01T00:00:00Z'

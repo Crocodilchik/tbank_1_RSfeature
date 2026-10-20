@@ -1,0 +1,23 @@
+dataset:
+  name: yoochoose
+  raw_dir: data/yoochoose/raw
+  processed_dir: data/yoochoose/processed
+  files:
+    clicks: yoochoose-clicks.dat
+    buys: yoochoose-buys.dat
+    official_test: yoochoose-test.dat
+    source_readme: dataset-README.txt
+  adapter:
+    header: false
+    separator: ','
+    encoding: utf-8
+    timestamp_unit: iso8601_utc
+    invalid_required_field: error
+    exact_duplicates: keep_first
+    metadata_conflict: error
+  user_entity_type: session
+  category_availability: observed_asof
+  primary_eval_mode: own_temporal_split
+  include_official_test: false
+  official_test_mode: supplementary_click_only
+  official_test_window: same_as_primary_test

@@ -1,0 +1,28 @@
+evaluation:
+  candidate_pool_size: 100
+  negatives_per_group: 99
+  seed: 42
+  target_strategy: last_event_only
+  exclude_user_eval_positives: true
+  exclude_future_positives: false
+  insufficient_candidates: skip_with_coverage
+  fallback_mode: separate_cohort
+  repeat_purchase_policy:
+    retailrocket: allow_previous
+    taobao: allow_previous
+    yoochoose: allow_within_session_only
+    movielens: unseen_only
+  primary_targets:
+    retailrocket: transaction
+    taobao: buy
+    yoochoose: click
+    movielens: rating>=4.0
+  fallback_targets:
+    retailrocket: addtocart
+    taobao: cart
+    yoochoose: last_click
+    movielens: rating_3.0-3.5
+  negative_sampling:
+    strategy: random
+    hard_negative_category_depth: 1
+  catalog_policy: observed_before_target

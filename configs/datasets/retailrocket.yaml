@@ -1,0 +1,20 @@
+dataset:
+  name: retailrocket
+  raw_dir: data/retailrocket/raw
+  processed_dir: data/retailrocket/processed
+  files:
+    events: events.csv
+    properties1: item_properties_part1.csv
+    properties2: item_properties_part2.csv
+    categories: category_tree.csv
+  adapter:
+    header: true
+    separator: ','
+    encoding: utf-8
+    timestamp_unit: milliseconds
+    invalid_required_field: error
+    exact_duplicates: keep_first
+    metadata_conflict: error
+  item_properties_availability: observed_snapshot
+  category_hierarchy_availability: static_assumed
+  item_category_availability: observed_snapshot

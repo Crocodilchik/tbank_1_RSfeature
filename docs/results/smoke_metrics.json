@@ -1,0 +1,1078 @@
+{
+  "status": "working_concept",
+  "dataset": "retailrocket",
+  "mode": "smoke",
+  "training_seeds": [
+    42
+  ],
+  "test_groups": 12,
+  "candidates_per_group": 100,
+  "pool_hash": "8a4b3a25fc74426677e7e8f1fdc669dcedb95596a575588ec7f4366456d01f2f",
+  "qualification": "Recorded technical smoke results, not full benchmark or statistical superiority.",
+  "models": [
+    {
+      "model": "baseline",
+      "cohorts": {
+        "all": {
+          "n_groups": 12,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": 1.0,
+            "NDCG@5": 1.0,
+            "NDCG@10": 1.0,
+            "NDCG@20": 1.0,
+            "Recall@3": 1.0,
+            "Recall@5": 1.0,
+            "Recall@10": 1.0,
+            "Recall@20": 1.0,
+            "HitRate@3": 1.0,
+            "HitRate@5": 1.0,
+            "HitRate@10": 1.0,
+            "HitRate@20": 1.0,
+            "MRR": 1.0,
+            "AUC": 1.0,
+            "LogLoss": 7.362659108609724e-06
+          }
+        },
+        "train_cold_user": {
+          "n_groups": 11,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": 1.0,
+            "NDCG@5": 1.0,
+            "NDCG@10": 1.0,
+            "NDCG@20": 1.0,
+            "Recall@3": 1.0,
+            "Recall@5": 1.0,
+            "Recall@10": 1.0,
+            "Recall@20": 1.0,
+            "HitRate@3": 1.0,
+            "HitRate@5": 1.0,
+            "HitRate@10": 1.0,
+            "HitRate@20": 1.0,
+            "MRR": 1.0,
+            "AUC": 1.0,
+            "LogLoss": 6.762730145521745e-06
+          }
+        },
+        "train_cold_item": {
+          "n_groups": 8,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": 1.0,
+            "NDCG@5": 1.0,
+            "NDCG@10": 1.0,
+            "NDCG@20": 1.0,
+            "Recall@3": 1.0,
+            "Recall@5": 1.0,
+            "Recall@10": 1.0,
+            "Recall@20": 1.0,
+            "HitRate@3": 1.0,
+            "HitRate@5": 1.0,
+            "HitRate@10": 1.0,
+            "HitRate@20": 1.0,
+            "MRR": 1.0,
+            "AUC": 1.0,
+            "LogLoss": 6.7436205934821885e-06
+          }
+        },
+        "event_cold_user": {
+          "n_groups": 0,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": null,
+            "NDCG@5": null,
+            "NDCG@10": null,
+            "NDCG@20": null,
+            "Recall@3": null,
+            "Recall@5": null,
+            "Recall@10": null,
+            "Recall@20": null,
+            "HitRate@3": null,
+            "HitRate@5": null,
+            "HitRate@10": null,
+            "HitRate@20": null,
+            "MRR": null,
+            "AUC": null,
+            "LogLoss": null
+          }
+        },
+        "event_cold_item": {
+          "n_groups": 0,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": null,
+            "NDCG@5": null,
+            "NDCG@10": null,
+            "NDCG@20": null,
+            "Recall@3": null,
+            "Recall@5": null,
+            "Recall@10": null,
+            "Recall@20": null,
+            "HitRate@3": null,
+            "HitRate@5": null,
+            "HitRate@10": null,
+            "HitRate@20": null,
+            "MRR": null,
+            "AUC": null,
+            "LogLoss": null
+          }
+        },
+        "short_session": {
+          "n_groups": 0,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": null,
+            "NDCG@5": null,
+            "NDCG@10": null,
+            "NDCG@20": null,
+            "Recall@3": null,
+            "Recall@5": null,
+            "Recall@10": null,
+            "Recall@20": null,
+            "HitRate@3": null,
+            "HitRate@5": null,
+            "HitRate@10": null,
+            "HitRate@20": null,
+            "MRR": null,
+            "AUC": null,
+            "LogLoss": null
+          }
+        },
+        "long_tail": {
+          "n_groups": 3,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": 1.0,
+            "NDCG@5": 1.0,
+            "NDCG@10": 1.0,
+            "NDCG@20": 1.0,
+            "Recall@3": 1.0,
+            "Recall@5": 1.0,
+            "Recall@10": 1.0,
+            "Recall@20": 1.0,
+            "HitRate@3": 1.0,
+            "HitRate@5": 1.0,
+            "HitRate@10": 1.0,
+            "HitRate@20": 1.0,
+            "MRR": 1.0,
+            "AUC": 1.0,
+            "LogLoss": 1.0466762020660865e-05
+          }
+        }
+      }
+    },
+    {
+      "model": "adv1",
+      "cohorts": {
+        "all": {
+          "n_groups": 12,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": 1.0,
+            "NDCG@5": 1.0,
+            "NDCG@10": 1.0,
+            "NDCG@20": 1.0,
+            "Recall@3": 1.0,
+            "Recall@5": 1.0,
+            "Recall@10": 1.0,
+            "Recall@20": 1.0,
+            "HitRate@3": 1.0,
+            "HitRate@5": 1.0,
+            "HitRate@10": 1.0,
+            "HitRate@20": 1.0,
+            "MRR": 1.0,
+            "AUC": 1.0,
+            "LogLoss": 1.7393882241617402e-05
+          }
+        },
+        "train_cold_user": {
+          "n_groups": 11,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": 1.0,
+            "NDCG@5": 1.0,
+            "NDCG@10": 1.0,
+            "NDCG@20": 1.0,
+            "Recall@3": 1.0,
+            "Recall@5": 1.0,
+            "Recall@10": 1.0,
+            "Recall@20": 1.0,
+            "HitRate@3": 1.0,
+            "HitRate@5": 1.0,
+            "HitRate@10": 1.0,
+            "HitRate@20": 1.0,
+            "MRR": 1.0,
+            "AUC": 1.0,
+            "LogLoss": 1.8442365701824154e-05
+          }
+        },
+        "train_cold_item": {
+          "n_groups": 8,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": 1.0,
+            "NDCG@5": 1.0,
+            "NDCG@10": 1.0,
+            "NDCG@20": 1.0,
+            "Recall@3": 1.0,
+            "Recall@5": 1.0,
+            "Recall@10": 1.0,
+            "Recall@20": 1.0,
+            "HitRate@3": 1.0,
+            "HitRate@5": 1.0,
+            "HitRate@10": 1.0,
+            "HitRate@20": 1.0,
+            "MRR": 1.0,
+            "AUC": 1.0,
+            "LogLoss": 2.0883908304903828e-05
+          }
+        },
+        "event_cold_user": {
+          "n_groups": 0,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": null,
+            "NDCG@5": null,
+            "NDCG@10": null,
+            "NDCG@20": null,
+            "Recall@3": null,
+            "Recall@5": null,
+            "Recall@10": null,
+            "Recall@20": null,
+            "HitRate@3": null,
+            "HitRate@5": null,
+            "HitRate@10": null,
+            "HitRate@20": null,
+            "MRR": null,
+            "AUC": null,
+            "LogLoss": null
+          }
+        },
+        "event_cold_item": {
+          "n_groups": 0,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": null,
+            "NDCG@5": null,
+            "NDCG@10": null,
+            "NDCG@20": null,
+            "Recall@3": null,
+            "Recall@5": null,
+            "Recall@10": null,
+            "Recall@20": null,
+            "HitRate@3": null,
+            "HitRate@5": null,
+            "HitRate@10": null,
+            "HitRate@20": null,
+            "MRR": null,
+            "AUC": null,
+            "LogLoss": null
+          }
+        },
+        "short_session": {
+          "n_groups": 0,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": null,
+            "NDCG@5": null,
+            "NDCG@10": null,
+            "NDCG@20": null,
+            "Recall@3": null,
+            "Recall@5": null,
+            "Recall@10": null,
+            "Recall@20": null,
+            "HitRate@3": null,
+            "HitRate@5": null,
+            "HitRate@10": null,
+            "HitRate@20": null,
+            "MRR": null,
+            "AUC": null,
+            "LogLoss": null
+          }
+        },
+        "long_tail": {
+          "n_groups": 3,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": 1.0,
+            "NDCG@5": 1.0,
+            "NDCG@10": 1.0,
+            "NDCG@20": 1.0,
+            "Recall@3": 1.0,
+            "Recall@5": 1.0,
+            "Recall@10": 1.0,
+            "Recall@20": 1.0,
+            "HitRate@3": 1.0,
+            "HitRate@5": 1.0,
+            "HitRate@10": 1.0,
+            "HitRate@20": 1.0,
+            "MRR": 1.0,
+            "AUC": 1.0,
+            "LogLoss": 3.730294612911868e-05
+          }
+        }
+      }
+    },
+    {
+      "model": "adv2",
+      "cohorts": {
+        "all": {
+          "n_groups": 12,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": 0.08333333333333333,
+            "NDCG@5": 0.11557106726954514,
+            "NDCG@10": 0.11557106726954514,
+            "NDCG@20": 0.15594298466007492,
+            "Recall@3": 0.08333333333333333,
+            "Recall@5": 0.16666666666666666,
+            "Recall@10": 0.16666666666666666,
+            "Recall@20": 0.3333333333333333,
+            "HitRate@3": 0.08333333333333333,
+            "HitRate@5": 0.16666666666666666,
+            "HitRate@10": 0.16666666666666666,
+            "HitRate@20": 0.3333333333333333,
+            "MRR": 0.1232353623791738,
+            "AUC": 0.6001683501683502,
+            "LogLoss": 0.05600153436267986
+          }
+        },
+        "train_cold_user": {
+          "n_groups": 11,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": 0.09090909090909091,
+            "NDCG@5": 0.12607752793041288,
+            "NDCG@10": 0.12607752793041288,
+            "NDCG@20": 0.17011961962917266,
+            "Recall@3": 0.09090909090909091,
+            "Recall@5": 0.18181818181818182,
+            "Recall@10": 0.18181818181818182,
+            "Recall@20": 0.36363636363636365,
+            "HitRate@3": 0.09090909090909091,
+            "HitRate@5": 0.18181818181818182,
+            "HitRate@10": 0.18181818181818182,
+            "HitRate@20": 0.36363636363636365,
+            "MRR": 0.13284368080917844,
+            "AUC": 0.6152433425160698,
+            "LogLoss": 0.05600153436267986
+          }
+        },
+        "train_cold_item": {
+          "n_groups": 8,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": 0.125,
+            "NDCG@5": 0.1733566009043177,
+            "NDCG@10": 0.1733566009043177,
+            "NDCG@20": 0.20333315922533413,
+            "Recall@3": 0.125,
+            "Recall@5": 0.25,
+            "Recall@10": 0.25,
+            "Recall@20": 0.375,
+            "HitRate@3": 0.125,
+            "HitRate@5": 0.25,
+            "HitRate@10": 0.25,
+            "HitRate@20": 0.375,
+            "MRR": 0.16901282604113171,
+            "AUC": 0.6275252525252526,
+            "LogLoss": 0.05600153436267986
+          }
+        },
+        "event_cold_user": {
+          "n_groups": 0,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": null,
+            "NDCG@5": null,
+            "NDCG@10": null,
+            "NDCG@20": null,
+            "Recall@3": null,
+            "Recall@5": null,
+            "Recall@10": null,
+            "Recall@20": null,
+            "HitRate@3": null,
+            "HitRate@5": null,
+            "HitRate@10": null,
+            "HitRate@20": null,
+            "MRR": null,
+            "AUC": null,
+            "LogLoss": null
+          }
+        },
+        "event_cold_item": {
+          "n_groups": 0,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": null,
+            "NDCG@5": null,
+            "NDCG@10": null,
+            "NDCG@20": null,
+            "Recall@3": null,
+            "Recall@5": null,
+            "Recall@10": null,
+            "Recall@20": null,
+            "HitRate@3": null,
+            "HitRate@5": null,
+            "HitRate@10": null,
+            "HitRate@20": null,
+            "MRR": null,
+            "AUC": null,
+            "LogLoss": null
+          }
+        },
+        "short_session": {
+          "n_groups": 0,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": null,
+            "NDCG@5": null,
+            "NDCG@10": null,
+            "NDCG@20": null,
+            "Recall@3": null,
+            "Recall@5": null,
+            "Recall@10": null,
+            "Recall@20": null,
+            "HitRate@3": null,
+            "HitRate@5": null,
+            "HitRate@10": null,
+            "HitRate@20": null,
+            "MRR": null,
+            "AUC": null,
+            "LogLoss": null
+          }
+        },
+        "long_tail": {
+          "n_groups": 3,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": 0.0,
+            "NDCG@5": 0.0,
+            "NDCG@10": 0.0,
+            "NDCG@20": 0.0,
+            "Recall@3": 0.0,
+            "Recall@5": 0.0,
+            "Recall@10": 0.0,
+            "Recall@20": 0.0,
+            "HitRate@3": 0.0,
+            "HitRate@5": 0.0,
+            "HitRate@10": 0.0,
+            "HitRate@20": 0.0,
+            "MRR": 0.018615307945691675,
+            "AUC": 0.4444444444444445,
+            "LogLoss": 0.05600153436267986
+          }
+        }
+      }
+    },
+    {
+      "model": "adv3",
+      "cohorts": {
+        "all": {
+          "n_groups": 12,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": 0.0,
+            "NDCG@5": 0.0322377339362118,
+            "NDCG@10": 0.05632646946270246,
+            "NDCG@20": 0.05632646946270246,
+            "Recall@3": 0.0,
+            "Recall@5": 0.08333333333333333,
+            "Recall@10": 0.16666666666666666,
+            "Recall@20": 0.16666666666666666,
+            "HitRate@3": 0.0,
+            "HitRate@5": 0.08333333333333333,
+            "HitRate@10": 0.16666666666666666,
+            "HitRate@20": 0.16666666666666666,
+            "MRR": 0.036766724715068845,
+            "AUC": 0.3653198653198653,
+            "LogLoss": 0.05908082852895106
+          }
+        },
+        "train_cold_user": {
+          "n_groups": 11,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": 0.0,
+            "NDCG@5": 0.03516843702132197,
+            "NDCG@10": 0.06144705759567541,
+            "NDCG@20": 0.06144705759567541,
+            "Recall@3": 0.0,
+            "Recall@5": 0.09090909090909091,
+            "Recall@10": 0.18181818181818182,
+            "Recall@20": 0.18181818181818182,
+            "HitRate@3": 0.0,
+            "HitRate@5": 0.09090909090909091,
+            "HitRate@10": 0.18181818181818182,
+            "HitRate@20": 0.18181818181818182,
+            "MRR": 0.03912101194213044,
+            "AUC": 0.3911845730027548,
+            "LogLoss": 0.05887419023429929
+          }
+        },
+        "train_cold_item": {
+          "n_groups": 8,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": 0.0,
+            "NDCG@5": 0.048356600904317704,
+            "NDCG@10": 0.048356600904317704,
+            "NDCG@20": 0.048356600904317704,
+            "Recall@3": 0.0,
+            "Recall@5": 0.125,
+            "Recall@10": 0.125,
+            "Recall@20": 0.125,
+            "HitRate@3": 0.0,
+            "HitRate@5": 0.125,
+            "HitRate@10": 0.125,
+            "HitRate@20": 0.125,
+            "MRR": 0.03696515028567759,
+            "AUC": 0.3257575757575758,
+            "LogLoss": 0.05968229402781512
+          }
+        },
+        "event_cold_user": {
+          "n_groups": 0,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": null,
+            "NDCG@5": null,
+            "NDCG@10": null,
+            "NDCG@20": null,
+            "Recall@3": null,
+            "Recall@5": null,
+            "Recall@10": null,
+            "Recall@20": null,
+            "HitRate@3": null,
+            "HitRate@5": null,
+            "HitRate@10": null,
+            "HitRate@20": null,
+            "MRR": null,
+            "AUC": null,
+            "LogLoss": null
+          }
+        },
+        "event_cold_item": {
+          "n_groups": 0,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": null,
+            "NDCG@5": null,
+            "NDCG@10": null,
+            "NDCG@20": null,
+            "Recall@3": null,
+            "Recall@5": null,
+            "Recall@10": null,
+            "Recall@20": null,
+            "HitRate@3": null,
+            "HitRate@5": null,
+            "HitRate@10": null,
+            "HitRate@20": null,
+            "MRR": null,
+            "AUC": null,
+            "LogLoss": null
+          }
+        },
+        "short_session": {
+          "n_groups": 0,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": null,
+            "NDCG@5": null,
+            "NDCG@10": null,
+            "NDCG@20": null,
+            "Recall@3": null,
+            "Recall@5": null,
+            "Recall@10": null,
+            "Recall@20": null,
+            "HitRate@3": null,
+            "HitRate@5": null,
+            "HitRate@10": null,
+            "HitRate@20": null,
+            "MRR": null,
+            "AUC": null,
+            "LogLoss": null
+          }
+        },
+        "long_tail": {
+          "n_groups": 3,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": 0.0,
+            "NDCG@5": 0.1289509357448472,
+            "NDCG@10": 0.1289509357448472,
+            "NDCG@20": 0.1289509357448472,
+            "Recall@3": 0.0,
+            "Recall@5": 0.3333333333333333,
+            "Recall@10": 0.3333333333333333,
+            "Recall@20": 0.3333333333333333,
+            "HitRate@3": 0.0,
+            "HitRate@5": 0.3333333333333333,
+            "HitRate@10": 0.3333333333333333,
+            "HitRate@20": 0.3333333333333333,
+            "MRR": 0.07640692640692641,
+            "AUC": 0.5084175084175085,
+            "LogLoss": 0.05780257475018217
+          }
+        }
+      }
+    },
+    {
+      "model": "adv4",
+      "cohorts": {
+        "all": {
+          "n_groups": 12,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": 0.0,
+            "NDCG@5": 0.03588971317278276,
+            "NDCG@10": 0.062178452904926816,
+            "NDCG@20": 0.10397981687051672,
+            "Recall@3": 0.0,
+            "Recall@5": 0.08333333333333333,
+            "Recall@10": 0.16666666666666666,
+            "Recall@20": 0.3333333333333333,
+            "HitRate@3": 0.0,
+            "HitRate@5": 0.08333333333333333,
+            "HitRate@10": 0.16666666666666666,
+            "HitRate@20": 0.3333333333333333,
+            "MRR": 0.05356274684863371,
+            "AUC": 0.5303030303030304,
+            "LogLoss": 0.0560209901511092
+          }
+        },
+        "train_cold_user": {
+          "n_groups": 11,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": 0.0,
+            "NDCG@5": 0.03915241437030846,
+            "NDCG@10": 0.03915241437030846,
+            "NDCG@20": 0.08475390233277018,
+            "Recall@3": 0.0,
+            "Recall@5": 0.09090909090909091,
+            "Recall@10": 0.09090909090909091,
+            "Recall@20": 0.2727272727272727,
+            "HitRate@3": 0.0,
+            "HitRate@5": 0.09090909090909091,
+            "HitRate@10": 0.09090909090909091,
+            "HitRate@20": 0.2727272727272727,
+            "MRR": 0.04706845110760041,
+            "AUC": 0.49403122130394866,
+            "LogLoss": 0.05608352226228735
+          }
+        },
+        "train_cold_item": {
+          "n_groups": 8,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": 0.0,
+            "NDCG@5": 0.05383456975917413,
+            "NDCG@10": 0.05383456975917413,
+            "NDCG@20": 0.08275684640414402,
+            "Recall@3": 0.0,
+            "Recall@5": 0.125,
+            "Recall@10": 0.125,
+            "Recall@20": 0.25,
+            "HitRate@3": 0.0,
+            "HitRate@5": 0.125,
+            "HitRate@10": 0.125,
+            "HitRate@20": 0.25,
+            "MRR": 0.0493612142900446,
+            "AUC": 0.45580808080808083,
+            "LogLoss": 0.056144298216184926
+          }
+        },
+        "event_cold_user": {
+          "n_groups": 0,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": null,
+            "NDCG@5": null,
+            "NDCG@10": null,
+            "NDCG@20": null,
+            "Recall@3": null,
+            "Recall@5": null,
+            "Recall@10": null,
+            "Recall@20": null,
+            "HitRate@3": null,
+            "HitRate@5": null,
+            "HitRate@10": null,
+            "HitRate@20": null,
+            "MRR": null,
+            "AUC": null,
+            "LogLoss": null
+          }
+        },
+        "event_cold_item": {
+          "n_groups": 0,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": null,
+            "NDCG@5": null,
+            "NDCG@10": null,
+            "NDCG@20": null,
+            "Recall@3": null,
+            "Recall@5": null,
+            "Recall@10": null,
+            "Recall@20": null,
+            "HitRate@3": null,
+            "HitRate@5": null,
+            "HitRate@10": null,
+            "HitRate@20": null,
+            "MRR": null,
+            "AUC": null,
+            "LogLoss": null
+          }
+        },
+        "short_session": {
+          "n_groups": 0,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": null,
+            "NDCG@5": null,
+            "NDCG@10": null,
+            "NDCG@20": null,
+            "Recall@3": null,
+            "Recall@5": null,
+            "Recall@10": null,
+            "Recall@20": null,
+            "HitRate@3": null,
+            "HitRate@5": null,
+            "HitRate@10": null,
+            "HitRate@20": null,
+            "MRR": null,
+            "AUC": null,
+            "LogLoss": null
+          }
+        },
+        "long_tail": {
+          "n_groups": 3,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": 0.0,
+            "NDCG@5": 0.0,
+            "NDCG@10": 0.0,
+            "NDCG@20": 0.0,
+            "Recall@3": 0.0,
+            "Recall@5": 0.0,
+            "Recall@10": 0.0,
+            "Recall@20": 0.0,
+            "HitRate@3": 0.0,
+            "HitRate@5": 0.0,
+            "HitRate@10": 0.0,
+            "HitRate@20": 0.0,
+            "MRR": 0.017452842738180752,
+            "AUC": 0.40740740740740744,
+            "LogLoss": 0.0561719803888259
+          }
+        }
+      }
+    },
+    {
+      "model": "score_feature_stacking",
+      "cohorts": {
+        "all": {
+          "n_groups": 12,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": 1.0,
+            "NDCG@5": 1.0,
+            "NDCG@10": 1.0,
+            "NDCG@20": 1.0,
+            "Recall@3": 1.0,
+            "Recall@5": 1.0,
+            "Recall@10": 1.0,
+            "Recall@20": 1.0,
+            "HitRate@3": 1.0,
+            "HitRate@5": 1.0,
+            "HitRate@10": 1.0,
+            "HitRate@20": 1.0,
+            "MRR": 1.0,
+            "AUC": 1.0,
+            "LogLoss": 1.265322125673023e-05
+          }
+        },
+        "train_cold_user": {
+          "n_groups": 11,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": 1.0,
+            "NDCG@5": 1.0,
+            "NDCG@10": 1.0,
+            "NDCG@20": 1.0,
+            "Recall@3": 1.0,
+            "Recall@5": 1.0,
+            "Recall@10": 1.0,
+            "Recall@20": 1.0,
+            "HitRate@3": 1.0,
+            "HitRate@5": 1.0,
+            "HitRate@10": 1.0,
+            "HitRate@20": 1.0,
+            "MRR": 1.0,
+            "AUC": 1.0,
+            "LogLoss": 6.80531928292057e-06
+          }
+        },
+        "train_cold_item": {
+          "n_groups": 8,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": 1.0,
+            "NDCG@5": 1.0,
+            "NDCG@10": 1.0,
+            "NDCG@20": 1.0,
+            "Recall@3": 1.0,
+            "Recall@5": 1.0,
+            "Recall@10": 1.0,
+            "Recall@20": 1.0,
+            "HitRate@3": 1.0,
+            "HitRate@5": 1.0,
+            "HitRate@10": 1.0,
+            "HitRate@20": 1.0,
+            "MRR": 1.0,
+            "AUC": 1.0,
+            "LogLoss": 6.249796561353833e-06
+          }
+        },
+        "event_cold_user": {
+          "n_groups": 0,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": null,
+            "NDCG@5": null,
+            "NDCG@10": null,
+            "NDCG@20": null,
+            "Recall@3": null,
+            "Recall@5": null,
+            "Recall@10": null,
+            "Recall@20": null,
+            "HitRate@3": null,
+            "HitRate@5": null,
+            "HitRate@10": null,
+            "HitRate@20": null,
+            "MRR": null,
+            "AUC": null,
+            "LogLoss": null
+          }
+        },
+        "event_cold_item": {
+          "n_groups": 0,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": null,
+            "NDCG@5": null,
+            "NDCG@10": null,
+            "NDCG@20": null,
+            "Recall@3": null,
+            "Recall@5": null,
+            "Recall@10": null,
+            "Recall@20": null,
+            "HitRate@3": null,
+            "HitRate@5": null,
+            "HitRate@10": null,
+            "HitRate@20": null,
+            "MRR": null,
+            "AUC": null,
+            "LogLoss": null
+          }
+        },
+        "short_session": {
+          "n_groups": 0,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": null,
+            "NDCG@5": null,
+            "NDCG@10": null,
+            "NDCG@20": null,
+            "Recall@3": null,
+            "Recall@5": null,
+            "Recall@10": null,
+            "Recall@20": null,
+            "HitRate@3": null,
+            "HitRate@5": null,
+            "HitRate@10": null,
+            "HitRate@20": null,
+            "MRR": null,
+            "AUC": null,
+            "LogLoss": null
+          }
+        },
+        "long_tail": {
+          "n_groups": 3,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": 1.0,
+            "NDCG@5": 1.0,
+            "NDCG@10": 1.0,
+            "NDCG@20": 1.0,
+            "Recall@3": 1.0,
+            "Recall@5": 1.0,
+            "Recall@10": 1.0,
+            "Recall@20": 1.0,
+            "HitRate@3": 1.0,
+            "HitRate@5": 1.0,
+            "HitRate@10": 1.0,
+            "HitRate@20": 1.0,
+            "MRR": 1.0,
+            "AUC": 1.0,
+            "LogLoss": 7.238158064548834e-06
+          }
+        }
+      }
+    },
+    {
+      "model": "soft_target_distillation",
+      "cohorts": {
+        "all": {
+          "n_groups": 12,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": 1.0,
+            "NDCG@5": 1.0,
+            "NDCG@10": 1.0,
+            "NDCG@20": 1.0,
+            "Recall@3": 1.0,
+            "Recall@5": 1.0,
+            "Recall@10": 1.0,
+            "Recall@20": 1.0,
+            "HitRate@3": 1.0,
+            "HitRate@5": 1.0,
+            "HitRate@10": 1.0,
+            "HitRate@20": 1.0,
+            "MRR": 1.0,
+            "AUC": 1.0,
+            "LogLoss": 7.23847763445717e-06
+          }
+        },
+        "train_cold_user": {
+          "n_groups": 11,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": 1.0,
+            "NDCG@5": 1.0,
+            "NDCG@10": 1.0,
+            "NDCG@20": 1.0,
+            "Recall@3": 1.0,
+            "Recall@5": 1.0,
+            "Recall@10": 1.0,
+            "Recall@20": 1.0,
+            "HitRate@3": 1.0,
+            "HitRate@5": 1.0,
+            "HitRate@10": 1.0,
+            "HitRate@20": 1.0,
+            "MRR": 1.0,
+            "AUC": 1.0,
+            "LogLoss": 6.756196156030816e-06
+          }
+        },
+        "train_cold_item": {
+          "n_groups": 8,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": 1.0,
+            "NDCG@5": 1.0,
+            "NDCG@10": 1.0,
+            "NDCG@20": 1.0,
+            "Recall@3": 1.0,
+            "Recall@5": 1.0,
+            "Recall@10": 1.0,
+            "Recall@20": 1.0,
+            "HitRate@3": 1.0,
+            "HitRate@5": 1.0,
+            "HitRate@10": 1.0,
+            "HitRate@20": 1.0,
+            "MRR": 1.0,
+            "AUC": 1.0,
+            "LogLoss": 6.640411587879635e-06
+          }
+        },
+        "event_cold_user": {
+          "n_groups": 0,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": null,
+            "NDCG@5": null,
+            "NDCG@10": null,
+            "NDCG@20": null,
+            "Recall@3": null,
+            "Recall@5": null,
+            "Recall@10": null,
+            "Recall@20": null,
+            "HitRate@3": null,
+            "HitRate@5": null,
+            "HitRate@10": null,
+            "HitRate@20": null,
+            "MRR": null,
+            "AUC": null,
+            "LogLoss": null
+          }
+        },
+        "event_cold_item": {
+          "n_groups": 0,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": null,
+            "NDCG@5": null,
+            "NDCG@10": null,
+            "NDCG@20": null,
+            "Recall@3": null,
+            "Recall@5": null,
+            "Recall@10": null,
+            "Recall@20": null,
+            "HitRate@3": null,
+            "HitRate@5": null,
+            "HitRate@10": null,
+            "HitRate@20": null,
+            "MRR": null,
+            "AUC": null,
+            "LogLoss": null
+          }
+        },
+        "short_session": {
+          "n_groups": 0,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": null,
+            "NDCG@5": null,
+            "NDCG@10": null,
+            "NDCG@20": null,
+            "Recall@3": null,
+            "Recall@5": null,
+            "Recall@10": null,
+            "Recall@20": null,
+            "HitRate@3": null,
+            "HitRate@5": null,
+            "HitRate@10": null,
+            "HitRate@20": null,
+            "MRR": null,
+            "AUC": null,
+            "LogLoss": null
+          }
+        },
+        "long_tail": {
+          "n_groups": 3,
+          "n_seeds": 1,
+          "metrics": {
+            "NDCG@3": 1.0,
+            "NDCG@5": 1.0,
+            "NDCG@10": 1.0,
+            "NDCG@20": 1.0,
+            "Recall@3": 1.0,
+            "Recall@5": 1.0,
+            "Recall@10": 1.0,
+            "Recall@20": 1.0,
+            "HitRate@3": 1.0,
+            "HitRate@5": 1.0,
+            "HitRate@10": 1.0,
+            "HitRate@20": 1.0,
+            "MRR": 1.0,
+            "AUC": 1.0,
+            "LogLoss": 1.0235763993015952e-05
+          }
+        }
+      }
+    }
+  ]
+}

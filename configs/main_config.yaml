@@ -1,0 +1,115 @@
+project:
+  root: .
+  data_dir: data
+  experiments_dir: experiments
+  schema_version: '1.0'
+runtime:
+  seed: 42
+  training_seeds:
+  - 42
+  - 43
+  - 44
+  chunk_rows: 1000000
+  device: auto
+  deterministic: true
+  training:
+    hpo_trials: 20
+    max_trial_hours: 2
+    max_neural_epochs: 50
+    max_booster_iterations: 2000
+    neural_patience: 3
+    booster_patience: 100
+    neural_batch_size: 256
+    gnn_fanout:
+    - 15
+    - 10
+    inner_train_quantiles:
+    - 0.5
+    - 0.7
+    - 0.85
+    valid_hpo_fraction: 0.6
+  models:
+    baseline:
+      backend: catboost
+      windows_days:
+      - 1
+      - 7
+      - 14
+      - 30
+    adv1:
+      backend: catboost
+      windows_days:
+      - 1
+      - 3
+      - 7
+      - 14
+      - 30
+      max_feature_depth: 2
+      max_candidate_features: 500
+      selected_features: 50
+    adv2:
+      backend: graphsage
+      hidden_size: 64
+      num_layers: 2
+      loss: sampled_bce
+    adv3:
+      hidden_size: 64
+      num_layers: 2
+      attention_heads: 2
+      loss: sampled_bce
+    adv4:
+      graph_feature_mode: temporal_oof
+      hidden_size: 64
+      lambda_graph: 0.1
+    distillation:
+      mode: soft_target_distillation
+      alpha: 0.5
+point_in_time_policy:
+  version: '1.0'
+  default_mode: event_level_pit
+  timestamp_handling:
+    unified_unit: seconds
+    timezone: UTC
+    store_milliseconds_when_available: true
+    strict_less_than: true
+    reliable_intra_timestamp_order: false
+  metadata:
+    default_availability: observed_asof
+    allow_exact_match_for_static_assumed: true
+  target_encoding:
+    enabled: true
+    smoothing_alpha: 10.0
+    min_history_events: 5
+    empty_prior: 0.5
+    mode: expanding_point_in_time
+  graph:
+    snapshot_granularity: daily
+    allow_exact_match: false
+    neighbor_sampling_from_snapshot_only: true
+  synthetic:
+    personas:
+      enabled: false
+      mode: rolling_snapshot
+      fit_cutoff_source: previous_snapshot
+      k: 32
+      vector_hash_dim: 256
+      batch_size: 4096
+      uncertainty_quantiles:
+      - 0.5
+      - 0.85
+      min_prior_interactions: 5
+      mixing_probabilities:
+      - 0.0
+      - 0.25
+      - 0.5
+    negatives:
+      enabled: true
+      used_for: train_only
+      no_previous_interaction_negatives: true
+      future_conflict_policy: keep_as_noise_audit_only
+      sample_weight: 1.0
+      negatives_per_positive: 4
+      difficulty_mix:
+      - 0.5
+      - 0.3
+      - 0.2

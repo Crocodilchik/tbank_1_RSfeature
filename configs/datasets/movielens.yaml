@@ -1,0 +1,24 @@
+dataset:
+  name: movielens
+  raw_dir: data/movielens/raw
+  processed_dir: data/movielens/processed
+  files:
+    ratings: rating.csv
+    movies: movie.csv
+    links: link.csv
+    tags: tag.csv
+    genome_scores: genome_scores.csv
+    genome_tags: genome_tags.csv
+  adapter:
+    header: true
+    separator: ','
+    encoding: utf-8
+    timestamp_unit: datetime_utc_assumed
+    invalid_required_field: error
+    exact_duplicates: keep_first
+    metadata_conflict: error
+  genres_availability: static_assumed
+  genome_scores_enabled: false
+  genome_scores_availability: static_assumed
+  genome_scores_usage: diagnostic_ablation_only
+  user_tags_availability: observed_asof

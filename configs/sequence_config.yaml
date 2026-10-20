@@ -1,0 +1,8 @@
+sequences:
+  max_history_length: 50
+  train_strategy: leave_one_out
+  eval_strategy: last_event_only
+  include_target_event_in_history: false
+  allow_previous_same_item: dataset_policy
+  causal_mask_required: true
+  empty_history_policy: keep_with_cold_start

@@ -1,0 +1,16 @@
+dataset:
+  name: taobao
+  raw_dir: data/taobao/raw
+  processed_dir: data/taobao/processed
+  files:
+    events: UserBehavior.csv
+  adapter:
+    header: false
+    separator: ','
+    encoding: utf-8
+    timestamp_unit: seconds
+    invalid_required_field: error
+    exact_duplicates: keep_first
+    metadata_conflict: error
+  category_id_availability: observed_asof
+  strict_ablation_category_id_availability: observed_asof

@@ -1,0 +1,26 @@
+{
+  "checked_at_utc": "2026-10-20T08:54:52.228298+00:00",
+  "status": "working_concept",
+  "fixture_run": {
+    "passed": 176,
+    "real_data_deselected": 4,
+    "warnings": 2,
+    "wall_seconds": 269.01,
+    "coverage_with_branches_percent": 95.73,
+    "command": "python -m pytest tests/ -m \"not real_data\" --cov=src --cov-branch --cov-fail-under=80"
+  },
+  "real_data_run": {
+    "passed": 4,
+    "wall_seconds": 0.86,
+    "command": "python -m pytest tests/test_adapters.py -m real_data"
+  },
+  "historical_full_suite": {
+    "passed": 180,
+    "coverage_with_branches_percent": 95.86,
+    "wall_seconds": 349.25
+  },
+  "implementation_index_sha256": "cbeb6c3df2b6f6d0070f1bf862c7c92846a44aa13e21fa888ef81bcdfa502589",
+  "digest_definition": "SHA256 of git ls-files --stage -- src scripts configs tests UTF-8 output",
+  "full_research_completed": false,
+  "production_runs_active": false
+}
